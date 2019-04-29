@@ -39,7 +39,7 @@
             this.countScoreTextBox = new System.Windows.Forms.TextBox();
             this.averageTextBox = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.studentListView = new System.Windows.Forms.ListBox();
+            this.studentListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // studentLabel
@@ -153,22 +153,23 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // studentListView
+            // studentListBox
             // 
-            this.studentListView.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentListView.FormattingEnabled = true;
-            this.studentListView.ItemHeight = 15;
-            this.studentListView.Location = new System.Drawing.Point(40, 53);
-            this.studentListView.Name = "studentListView";
-            this.studentListView.Size = new System.Drawing.Size(502, 124);
-            this.studentListView.TabIndex = 6;
+            this.studentListBox.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentListBox.FormattingEnabled = true;
+            this.studentListBox.ItemHeight = 15;
+            this.studentListBox.Location = new System.Drawing.Point(40, 53);
+            this.studentListBox.Name = "studentListBox";
+            this.studentListBox.Size = new System.Drawing.Size(502, 124);
+            this.studentListBox.TabIndex = 6;
+            this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
             // 
             // StudentScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 327);
-            this.Controls.Add(this.studentListView);
+            this.Controls.Add(this.studentListBox);
             this.Controls.Add(this.averageTextBox);
             this.Controls.Add(this.countScoreTextBox);
             this.Controls.Add(this.totalScoreTextBox);
@@ -201,7 +202,7 @@
         private System.Windows.Forms.TextBox countScoreTextBox;
         private System.Windows.Forms.TextBox averageTextBox;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.ListBox studentListView;
+        private System.Windows.Forms.ListBox studentListBox;
     }
 }
 
