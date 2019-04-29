@@ -12,7 +12,6 @@ namespace HaiVu_Final_Project
 {
     public partial class StudentScoreForm : Form
     {
-        //public string[]
         public StudentScoreForm()
         {
             InitializeComponent();
@@ -20,7 +19,9 @@ namespace HaiVu_Final_Project
 
         private void StudentScoreForm_Load(object sender, EventArgs e)
         {
-
+            this.studentListView.Items.Add(new Student("Joel Murach", new int[] { 97, 71, 83 }).ToString());
+            this.studentListView.Items.Add(new Student("Doug Lowe", new int[] { 99, 93, 97 }).ToString());
+            this.studentListView.Items.Add(new Student("Anne Boehm", new int[] { 100, 100, 100 }).ToString());
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -41,6 +42,11 @@ namespace HaiVu_Final_Project
         private void exitButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private int getTotalScore()
+        {
+            return 0;
         }
 
     

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.studentLabel = new System.Windows.Forms.Label();
-            this.studentListView = new System.Windows.Forms.ListView();
             this.addButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.countScoreTextBox = new System.Windows.Forms.TextBox();
             this.averageTextBox = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.studentListView = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // studentLabel
@@ -51,15 +51,6 @@
             this.studentLabel.Size = new System.Drawing.Size(72, 16);
             this.studentLabel.TabIndex = 0;
             this.studentLabel.Text = "Students";
-            // 
-            // studentListView
-            // 
-            this.studentListView.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentListView.Location = new System.Drawing.Point(40, 53);
-            this.studentListView.Name = "studentListView";
-            this.studentListView.Size = new System.Drawing.Size(502, 139);
-            this.studentListView.TabIndex = 1;
-            this.studentListView.UseCompatibleStateImageBehavior = false;
             // 
             // addButton
             // 
@@ -162,11 +153,22 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // studentListView
+            // 
+            this.studentListView.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentListView.FormattingEnabled = true;
+            this.studentListView.ItemHeight = 15;
+            this.studentListView.Location = new System.Drawing.Point(40, 53);
+            this.studentListView.Name = "studentListView";
+            this.studentListView.Size = new System.Drawing.Size(502, 124);
+            this.studentListView.TabIndex = 6;
+            // 
             // StudentScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 327);
+            this.Controls.Add(this.studentListView);
             this.Controls.Add(this.averageTextBox);
             this.Controls.Add(this.countScoreTextBox);
             this.Controls.Add(this.totalScoreTextBox);
@@ -177,7 +179,6 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.studentListView);
             this.Controls.Add(this.studentLabel);
             this.Name = "StudentScoreForm";
             this.Text = "Student Scores";
@@ -190,7 +191,6 @@
         #endregion
 
         private System.Windows.Forms.Label studentLabel;
-        private System.Windows.Forms.ListView studentListView;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;
@@ -201,6 +201,7 @@
         private System.Windows.Forms.TextBox countScoreTextBox;
         private System.Windows.Forms.TextBox averageTextBox;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.ListBox studentListView;
     }
 }
 
