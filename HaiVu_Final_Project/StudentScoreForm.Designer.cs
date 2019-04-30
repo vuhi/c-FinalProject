@@ -160,7 +160,7 @@
             this.studentListBox.ItemHeight = 15;
             this.studentListBox.Location = new System.Drawing.Point(40, 53);
             this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(502, 124);
+            this.studentListBox.Size = new System.Drawing.Size(502, 139);
             this.studentListBox.TabIndex = 6;
             this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
             // 

@@ -1,26 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HaiVu_Final_Project
 {
-    public class Student
+    public class Student : ICloneable 
     {
         public string Name { get; set; }
-        public int[] Scores { get; set; }
+        public List<int> Scores { get; set; }
 
-        public Student() {  }
-        public Student(string name, int[] scores = null )
+        public Student()
+        {
+            this.Name = "";
+            this.Scores = new List<int>();
+        }
+        public Student(string name, List<int> scores = null )
         {
             this.Name = name;
-            this.Scores = scores != null ? scores : Array.Empty<int>();
+            this.Scores = scores != null ? scores : new List<int>();
         }
 
         public override string ToString()
         {            
             return $"{this.Name}|{string.Join("|", this.Scores)}";
+        }
+
+        public object Clone()
+        {
+            return new Student(this.Name, this.Scores);
         }
     }
 }
