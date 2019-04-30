@@ -73,7 +73,7 @@ namespace HaiVu_Final_Project
 
         private void updateStudentButton_Click(object sender, EventArgs e)
         {
-            // Using the ListBox as a temporary storage rather than clone new Student, which will decrease the memmory wasted
+            // I used the ListBox as a temporary storage rather than cloning new Student object. 
             this.updatedStudent.Scores = this.updatedStudentScoresListBox.Items.Cast<int>().ToList();
             this.DialogResult = DialogResult.OK;        
         }
