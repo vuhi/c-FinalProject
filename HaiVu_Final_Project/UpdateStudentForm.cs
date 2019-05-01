@@ -73,7 +73,7 @@ namespace HaiVu_Final_Project
 
         private void updateStudentButton_Click(object sender, EventArgs e)
         {
-            // I used the ListBox as a temporary storage rather than cloning new Student object. 
+            // For some reason deep copy was not work. I had to use the ListBox as a temporary storage rather than cloning new Student object. 
             this.updatedStudent.Scores = this.updatedStudentScoresListBox.Items.Cast<int>().ToList();
             this.DialogResult = DialogResult.OK;        
         }
